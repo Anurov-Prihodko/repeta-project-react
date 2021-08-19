@@ -3,6 +3,8 @@
   width: 100px;
   height: 100px;
   margin: 10px;
+  border: none;
+  border-radius: 5px;
   transition: transform 250ms linear;
 }
 

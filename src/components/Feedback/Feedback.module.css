@@ -1,0 +1,33 @@
+.counter {
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+.value {
+  display: block;
+  font-weight: 700;
+  font-size: 50px;
+  color: #717579;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 15px;
+}
+
+.pug {
+  border: none;
+  margin: 0;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: rgb(255, 237, 79);
+  cursor: pointer;
+  color: #717579;
+}

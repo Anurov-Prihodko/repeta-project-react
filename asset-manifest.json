@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/repeta-project-react/static/css/main.008d038a.chunk.css",
+    "main.js": "/repeta-project-react/static/js/main.6d376278.chunk.js",
+    "main.js.map": "/repeta-project-react/static/js/main.6d376278.chunk.js.map",
+    "runtime-main.js": "/repeta-project-react/static/js/runtime-main.bc526d54.js",
+    "runtime-main.js.map": "/repeta-project-react/static/js/runtime-main.bc526d54.js.map",
+    "static/js/2.97258081.chunk.js": "/repeta-project-react/static/js/2.97258081.chunk.js",
+    "static/js/2.97258081.chunk.js.map": "/repeta-project-react/static/js/2.97258081.chunk.js.map",
+    "index.html": "/repeta-project-react/index.html",
+    "static/css/main.008d038a.chunk.css.map": "/repeta-project-react/static/css/main.008d038a.chunk.css.map",
+    "static/js/2.97258081.chunk.js.LICENSE.txt": "/repeta-project-react/static/js/2.97258081.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bc526d54.js",
+    "static/js/2.97258081.chunk.js",
+    "static/css/main.008d038a.chunk.css",
+    "static/js/main.6d376278.chunk.js"
+  ]
+}

@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-01-components",
+  "name": "repeta-project-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Anurov-Prihodko.github.io/goit-react-hw-01-components",
+  "homepage": "https://Anurov-Prihodko.github.io/repeta-project-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

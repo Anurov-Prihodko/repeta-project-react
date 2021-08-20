@@ -1,5 +1,21 @@
 .todoList {
   width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
 }
 
 .pug {
@@ -13,16 +29,14 @@
   color: #717579;
 }
 
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  border: 1px solid grey;
-}
-
 .text {
   font-size: 20px;
   font-weight: 700;
   margin-right: 10px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  color: #717579;
 }

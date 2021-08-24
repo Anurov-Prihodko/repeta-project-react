@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
-
+// import todos from './todos.json';
 // import Form from './components/Form';
 // import Feedback from './components/Feedback';
 // import Dropdown from './components/Dropdown';
@@ -8,6 +8,9 @@ import shortid from 'shortid';
 import TodoEditor from './components/TodoEditor';
 import TodoList from './components/TodoList';
 import Filter from './components/Filter';
+import Modal from './components/Modal';
+import Clock from './components/Clock';
+import Container from './components/Container';
 
 // const colorPickerOptions = [
 //   { label: 'red', color: '#F44336' },
@@ -20,14 +23,33 @@ import Filter from './components/Filter';
 
 class App extends Component {
   state = {
-    todos: [
-      { id: 'id-1', text: 'Выучить основы React', completed: false },
-      { id: 'id-2', text: 'Разобраться с React Router', completed: false },
-      { id: 'id-3', text: 'Пережить Redux', completed: false },
-      { id: 'id-4', text: 'Попробовать React Hooks', completed: false },
-    ],
+    todos: [],
     filter: '',
+    showModal: false,
   };
+
+  // --- НАЧАЛЬНЫЙ СТЕЙТ ---
+  componentDidMount() {
+    // console.log('Записываю начальное состояние state');
+
+    const todos = localStorage.getItem('todos');
+    const parseTodos = JSON.parse(todos);
+
+    if (parseTodos) {
+      this.setState({ todos: parseTodos });
+    }
+  }
+
+  // --- СТЕЙТ ПОСЛЕ ОБНОВЛЕНИЯ ---
+  componentDidUpdate(prevProps, prevState) {
+    // console.log('Обновлю поле todos, записываю todos в хранилище');
+
+    if (this.state.todos !== prevState.todos) {
+      // console.log('Обновилось поле todos');
+
+      localStorage.setItem('todos', JSON.stringify(this.state.todos));
+    }
+  }
 
   addTodo = text => {
     const todo = {
@@ -88,22 +110,51 @@ class App extends Component {
     return todos.reduce((acc, todo) => (todo.completed ? acc + 1 : acc), 0);
   };
 
+  toggleModal = () => {
+    this.setState(({ showModal }) => ({
+      showModal: !showModal,
+    }));
+  };
+
   render() {
-    const { todos, filter } = this.state;
+    const { todos, filter, showModal } = this.state;
 
     const totalTodosCount = todos.length;
     const completeTodosCount = this.getCompletedTodoCount();
     const visibleTodos = this.getVisibleTodos();
 
     return (
-      <>
+      <Container>
+        {showModal && <Clock />}
+
+        <button type="button" onClick={this.toggleModal}>
+          Open modal
+        </button>
+        {/* {showModal && (
+          <Modal onClose={this.toggleModal}>
+            <h1>Hello pug</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.{' '}
+            </p>
+            <button type="button" onClick={this.toggleModal}>
+              Close modal
+            </button>
+          </Modal>
+        )} */}
+
         {/* <Form onSubmit={this.formSubmitHandler} /> */}
         {/* <ColorPicker options={colorPickerOptions} />
         <hr />
         <Dropdown />
         <hr />
         <Feedback /> */}
-        <div>
+        {/* <div>
           <p>Всего: {totalTodosCount}</p>
           <p>Ко-во выполненных: {completeTodosCount} </p>
         </div>
@@ -114,8 +165,8 @@ class App extends Component {
           todos={visibleTodos}
           onDeleteTodo={this.deleteTodo}
           onTogleCompleted={this.togleCompleted}
-        />
-      </>
+        /> */}
+      </Container>
     );
   }
 }

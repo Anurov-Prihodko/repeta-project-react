@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/repeta-project-react/static/css/main.658ad2f6.chunk.css",
-    "main.js": "/repeta-project-react/static/js/main.d0573948.chunk.js",
-    "main.js.map": "/repeta-project-react/static/js/main.d0573948.chunk.js.map",
+    "main.css": "/repeta-project-react/static/css/main.35abee81.chunk.css",
+    "main.js": "/repeta-project-react/static/js/main.6d65c6f7.chunk.js",
+    "main.js.map": "/repeta-project-react/static/js/main.6d65c6f7.chunk.js.map",
     "runtime-main.js": "/repeta-project-react/static/js/runtime-main.bc526d54.js",
     "runtime-main.js.map": "/repeta-project-react/static/js/runtime-main.bc526d54.js.map",
-    "static/js/2.e6237a2a.chunk.js": "/repeta-project-react/static/js/2.e6237a2a.chunk.js",
-    "static/js/2.e6237a2a.chunk.js.map": "/repeta-project-react/static/js/2.e6237a2a.chunk.js.map",
+    "static/js/2.08afc0ff.chunk.js": "/repeta-project-react/static/js/2.08afc0ff.chunk.js",
+    "static/js/2.08afc0ff.chunk.js.map": "/repeta-project-react/static/js/2.08afc0ff.chunk.js.map",
     "index.html": "/repeta-project-react/index.html",
-    "static/css/main.658ad2f6.chunk.css.map": "/repeta-project-react/static/css/main.658ad2f6.chunk.css.map",
-    "static/js/2.e6237a2a.chunk.js.LICENSE.txt": "/repeta-project-react/static/js/2.e6237a2a.chunk.js.LICENSE.txt"
+    "static/css/main.35abee81.chunk.css.map": "/repeta-project-react/static/css/main.35abee81.chunk.css.map",
+    "static/js/2.08afc0ff.chunk.js.LICENSE.txt": "/repeta-project-react/static/js/2.08afc0ff.chunk.js.LICENSE.txt",
+    "static/media/plus.cea85201.svg": "/repeta-project-react/static/media/plus.cea85201.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.bc526d54.js",
-    "static/js/2.e6237a2a.chunk.js",
-    "static/css/main.658ad2f6.chunk.css",
-    "static/js/main.d0573948.chunk.js"
+    "static/js/2.08afc0ff.chunk.js",
+    "static/css/main.35abee81.chunk.css",
+    "static/js/main.6d65c6f7.chunk.js"
   ]
 }

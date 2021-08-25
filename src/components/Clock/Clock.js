@@ -17,6 +17,11 @@ export default class Clock extends Component {
     );
   }
 
+  componentWillUnmount() {
+    console.log('clearInterval');
+    clearInterval(this.intervalId);
+  }
+
   render() {
     return <div className={s.fase}>{this.state.time}</div>;
   }
